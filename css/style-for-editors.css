@@ -1,0 +1,8 @@
+#menu-tools,
+#menu-comments,
+#dashboard-widgets-wrap,
+#toplevel_page_wpcf7,
+.hide-if-no-customize
+{
+	display: none;
+}
