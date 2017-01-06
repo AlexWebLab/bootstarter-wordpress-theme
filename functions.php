@@ -28,11 +28,22 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 // Disable Woocommerce Default Styling
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
-// Disable Woocommerce Default Styling
+// Add Woocommerce support
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'woocommerce_support' );
+
+// Remove some nodes from admin top bar menu
+add_action( 'admin_bar_menu', 'remove_some_nodes_from_admin_top_bar_menu', 999 );
+function remove_some_nodes_from_admin_top_bar_menu( $wp_admin_bar ) {
+    $wp_admin_bar->remove_menu( 'customize' );
+	$wp_admin_bar->remove_menu( 'wp-logo' );
+	$wp_admin_bar->remove_menu( 'updates' );
+	$wp_admin_bar->remove_menu( 'comments' );
+	$wp_admin_bar->remove_menu( 'new-content' );
+	$wp_admin_bar->remove_menu( 'search' );
+}
 
 // Custom CSS for WYSIWYG editor
 function custom_editor_style() {

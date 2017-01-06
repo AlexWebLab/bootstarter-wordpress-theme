@@ -22,7 +22,7 @@
 <div id="page" class="site">
     <header id="masthead" class="site-header" role="banner">
 
-		<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
+		<nav id="site-navigation" class="main-navigation navbar" role="navigation">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 				<button type="button" class="icon icon--transparent navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navigation">
