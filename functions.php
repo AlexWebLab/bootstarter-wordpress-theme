@@ -34,16 +34,33 @@ function woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'woocommerce_support' );
 
-// Remove some nodes from admin top bar menu
-add_action( 'admin_bar_menu', 'remove_some_nodes_from_admin_top_bar_menu', 999 );
-function remove_some_nodes_from_admin_top_bar_menu( $wp_admin_bar ) {
-    $wp_admin_bar->remove_menu( 'customize' );
-	$wp_admin_bar->remove_menu( 'wp-logo' );
-	$wp_admin_bar->remove_menu( 'updates' );
-	$wp_admin_bar->remove_menu( 'comments' );
-	$wp_admin_bar->remove_menu( 'new-content' );
-	$wp_admin_bar->remove_menu( 'search' );
+// Update the wrappers around Woocommerce pages
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+add_action('woocommerce_before_main_content', 'my_content_wrapper_start', 10);
+function my_content_wrapper_start() {
+	echo '<main id="main" class="site-main" role="main">';
 }
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_after_main_content', 'my_content_wrapper_end', 10);
+function my_content_wrapper_end() {
+	echo '</main><!-- #main -->';
+}
+
+// Remove Woocommerce actions
+// remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+// remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+// remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+// remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+// remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+// remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// Remove review tab on Woocommerce product page
+// add_filter( 'woocommerce_product_tabs', 'remove_reviews_tab', 98);
+// function remove_reviews_tab($tabs) {
+// 	unset($tabs['reviews']);
+// 	return $tabs;
+// }
 
 // Custom CSS for WYSIWYG editor
 function custom_editor_style() {
@@ -58,6 +75,17 @@ function css_to_back_end() {
 	}
 }
 add_action('admin_head', 'css_to_back_end');
+
+// Remove some nodes from admin top bar menu
+// add_action( 'admin_bar_menu', 'remove_some_nodes_from_admin_top_bar_menu', 999 );
+// function remove_some_nodes_from_admin_top_bar_menu( $wp_admin_bar ) {
+//     $wp_admin_bar->remove_menu( 'customize' );
+// 	$wp_admin_bar->remove_menu( 'wp-logo' );
+// 	$wp_admin_bar->remove_menu( 'updates' );
+// 	$wp_admin_bar->remove_menu( 'comments' );
+// 	$wp_admin_bar->remove_menu( 'new-content' );
+// 	$wp_admin_bar->remove_menu( 'search' );
+// }
 
 // Remove some unwanted submenu entries for editors
 add_action( 'admin_menu', 'remove_entries_for_editors', 999 );
@@ -96,3 +124,9 @@ function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/style-login.css' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+// custom excerpt lenght
+function custom_excerpt_length( $length ) {
+	return 16;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

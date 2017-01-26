@@ -12,7 +12,6 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mobile.custom.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/js/jasny-bootstrap.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/flickity-2.0.5/flickity.pkgd.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/fancyBox-18d1712/jquery.fancybox.pack.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/fancyBox-18d1712/helpers/jquery.fancybox-media.js"></script>
