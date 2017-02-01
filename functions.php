@@ -130,3 +130,10 @@ function custom_excerpt_length( $length ) {
 	return 16;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Remove Multilingual Content Setup metabox on every post type edit page
+add_action('admin_head', 'disable_icl_metabox');
+function disable_icl_metabox() {
+    $screen = get_current_screen();
+    remove_meta_box('icl_div_config',$screen->post_type,'normal');
+}
