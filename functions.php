@@ -137,3 +137,12 @@ function disable_icl_metabox() {
     $screen = get_current_screen();
     remove_meta_box('icl_div_config',$screen->post_type,'normal');
 }
+
+// Custom image sizes
+add_action( 'after_setup_theme', 'custom_image_sizes' );
+function custom_image_sizes() {
+    add_image_size( 'image-1400px-wide', 1400 ); // 1400 pixels wide (and unlimited height)
+    add_image_size( 'image-700px-wide', 700 ); // 700 pixels wide (and unlimited height)
+    add_image_size( 'image-350px-wide', 350 ); // 350 pixels wide (and unlimited height)
+	add_image_size( 'image-175px-wide', 175 ); // 175 pixels wide (and unlimited height)
+}
