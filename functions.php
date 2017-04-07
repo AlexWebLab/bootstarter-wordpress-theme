@@ -19,9 +19,6 @@ add_theme_support( 'html5', array(
 	'caption',
 ) );
 
-// Custom template tags for this theme.
-require get_template_directory() . '/inc/template-tags.php';
-
 // Register Bootstrap Navigation Walker
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
