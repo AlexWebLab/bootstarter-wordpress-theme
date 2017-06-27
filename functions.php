@@ -143,3 +143,36 @@ function custom_image_sizes() {
     add_image_size( 'image-350px-wide', 350 ); // 350 pixels wide (and unlimited height)
 	add_image_size( 'image-175px-wide', 175 ); // 175 pixels wide (and unlimited height)
 }
+
+// Page Template Dashboard
+add_filter('manage_edit-page_columns', 'add_template_column' );
+function add_template_column( $page_columns ) {
+	unset($page_columns['comments']);
+
+	$author = $page_columns['author'];
+	unset($page_columns['author']);
+	$date = $page_columns['date'];
+	unset($page_columns['date']);
+
+	$page_columns['template'] = 'Page Template';
+	$page_columns['author'] = $author;
+	$page_columns['date'] = $date;
+
+	return $page_columns;
+}
+add_action('manage_page_posts_custom_column', 'add_template_data' );
+function add_template_data( $column_name ) {
+	if ( 'template' !== $column_name ) {
+		return;
+	}
+	global $post;
+
+	$template_name = get_page_template_slug( $post->ID );
+	$template      = untrailingslashit( get_stylesheet_directory() ) . '/' . $template_name;
+
+	$template_name = ( 0 === strlen( trim( $template_name ) ) || ! file_exists( $template ) ) ?
+		'Default' :
+		ucwords( str_ireplace( array('-','.php'), array(' ',''), get_file_description( $template ) ) );
+
+	echo esc_html( $template_name );
+}
