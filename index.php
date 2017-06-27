@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-
-	<main id="main" class="site-main" role="main">
-
 	<?php if ( have_posts() ) { ?>
 		<?php while ( have_posts() ) { the_post(); ?>
 
@@ -15,7 +12,4 @@
 
 		<?php } // end while have_posts() ?>
 	<?php } // end if have_posts() ?>
-
-	</main><!-- #main -->
-
 <?php get_footer();

@@ -1,4 +1,5 @@
-
+        </main><!-- #main -->
+        
     	<footer id="colophon" class="site-footer" role="contentinfo">
             <div class="container-fluid">
                 <?php echo date('Y'); ?> &copy;
