@@ -14,6 +14,20 @@ $(document).ready(function() {
         centerModals($(this));
     });
 
+    // hover effect for touch devices
+    $('.hover_effect').on('mouseenter', function() {
+        $(this).addClass('on_hover');
+    });
+    $('.hover_effect').on('touchstart', function() {
+        $(this).addClass('on_hover');
+    });
+    $('.hover_effect').on('mouseleave', function() {
+        $(this).removeClass('on_hover');
+    });
+    $('.hover_effect').on('touchend', function() {
+        $('.hover_effect').removeClass('on_hover');
+    });
+
     // mobile toggle icon
 	$('#main_navigation').on('show.bs.collapse', function () {
 		$('.icon').addClass('icon--active');
