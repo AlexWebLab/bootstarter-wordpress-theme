@@ -1,5 +1,5 @@
         </main><!-- #main -->
-        
+
     	<footer id="colophon" class="site-footer" role="contentinfo">
             <div class="container-fluid">
                 <?php echo date('Y'); ?> &copy;
@@ -10,6 +10,8 @@
     <div class="device-xxs visible-xxs"></div><div class="device-xs visible-xs"></div><div class="device-sm visible-sm"></div><div class="device-md visible-md"></div><div class="device-lg visible-lg"></div>
     <div id="display_classes"><div class="device-xxs visible-xxs">X</div><div class="device-xs visible-xs">XS</div><div class="device-sm visible-sm">SM</div><div class="device-md visible-md">MD</div><div class="device-lg visible-lg">LG</div><div id="window_width"></div></div>
 
+    <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/cssua.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mobile.custom.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
