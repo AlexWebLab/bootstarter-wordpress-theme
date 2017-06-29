@@ -19,6 +19,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/fancyBox-18d1712/jquery.fancybox.pack.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/fancyBox-18d1712/helpers/jquery.fancybox-media.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/select2-4.0.3/js/select2.full.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/js/jasny-bootstrap.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
     <?php wp_footer(); ?>
