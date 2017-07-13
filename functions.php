@@ -155,7 +155,8 @@ function add_template_column( $page_columns ) {
 	unset($page_columns['date']);
 
 	$page_columns['template'] = 'Page Template';
-	$page_columns['author'] = $author;
+	$page_columns['order'] = 'Order';
+	//$page_columns['author'] = $author;
 	$page_columns['date'] = $date;
 
 	return $page_columns;
@@ -175,4 +176,15 @@ function add_template_data( $column_name ) {
 		ucwords( str_ireplace( array('-','.php'), array(' ',''), get_file_description( $template ) ) );
 
 	echo esc_html( $template_name );
+}
+add_action('manage_page_posts_custom_column', 'add_order_data' );
+function add_order_data( $column_name ) {
+	if ( 'order' !== $column_name ) {
+		return;
+	}
+	global $post;
+
+	$order = $post->menu_order;
+
+	echo esc_html( $order );
 }
