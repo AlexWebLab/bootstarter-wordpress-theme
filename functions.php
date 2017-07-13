@@ -188,3 +188,14 @@ function add_order_data( $column_name ) {
 
 	echo esc_html( $order );
 }
+
+// add editor extra capabilities
+function add_editor_extra_capabilities() {
+	// get the the role object
+	$role_object = get_role( 'editor' );
+	// add $cap capability to this role object if it doesn't have yet
+	if( !$role_object->has_cap('edit_theme_options') ){
+		$role_object->add_cap( 'edit_theme_options' );
+	}
+}
+add_action( 'admin_init', 'add_editor_extra_capabilities' );
