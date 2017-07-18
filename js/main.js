@@ -36,6 +36,17 @@ $(document).ready(function() {
 		$('.icon').removeClass('icon--active');
   	});
 
+    // show a specific Bootstrap tab pane based on the URL hashtag
+    if ($('.nav-tabs').length > 0) { // if .nav-tabs exists
+        var hashtag = window.location.hash;
+        if (hashtag!='') {
+            $('.nav-tabs > li').removeClass('active');
+            $('.nav-tabs > li > a[href="'+hashtag+'"]').parent('li').addClass('active');
+            $('.tab-content > div').removeClass('active');
+            $(hashtag).addClass('active');
+        }
+    }
+
     tuning();
 });
 
