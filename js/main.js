@@ -40,12 +40,18 @@ $(document).ready(function() {
 });
 
 var width = $(window).width();
+var resizeTimer;
 $(window).resize(function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+    // Run code here, resizing has "stopped"
     tuning();
 
     if ($(window).width()==width) return;
     width = $(window).width();
     horizontal_tuning(); // launched only if there is an horizontal resize
+
+    }, 250);
 });
 
 $(window).scroll(function() { });
