@@ -5,14 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap_extended.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-flexbox.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/fancyBox-3.1.20/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/select2-4.0.3/css/select2.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/flickity-2.0.8/flickity.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/css/jasny-bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/css/bootstrap_extended.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/css/bootstrap-flexbox.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/css/font-awesome.min.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/js/fancyBox-3.1.20/jquery.fancybox.min.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/js/select2-4.0.3/css/select2.min.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/js/flickity-2.0.8/flickity.min.css"> -->
+	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/css/jasny-bootstrap.min.css"> -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/compressed.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
 
 	<?php wp_head(); ?>
