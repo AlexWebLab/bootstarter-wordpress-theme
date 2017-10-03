@@ -14,7 +14,7 @@
 	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/js/flickity-2.0.8/flickity.min.css"> -->
 	<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/css/jasny-bootstrap.min.css"> -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/compressed.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css?ver=<?php echo time(); ?>">
 
 	<?php wp_head(); ?>
 </head>

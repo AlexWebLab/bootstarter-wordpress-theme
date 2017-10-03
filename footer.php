@@ -22,7 +22,7 @@
     <!-- <script src="<?php //echo get_template_directory_uri(); ?>/js/select2-4.0.3/js/select2.full.min.js"></script> -->
     <!-- <script src="<?php //echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/js/jasny-bootstrap.min.js"></script> -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/compressed.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js?ver=<?php echo time(); ?>"></script>
 
     <?php wp_footer(); ?>
 </body>
