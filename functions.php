@@ -138,10 +138,10 @@ function disable_icl_metabox() {
 // Custom image sizes
 add_action( 'after_setup_theme', 'custom_image_sizes' );
 function custom_image_sizes() {
-    add_image_size( 'image-1400px-wide', 1400 ); // 1400 pixels wide (and unlimited height)
-    add_image_size( 'image-700px-wide', 700 ); // 700 pixels wide (and unlimited height)
-    add_image_size( 'image-350px-wide', 350 ); // 350 pixels wide (and unlimited height)
-	add_image_size( 'image-175px-wide', 175 ); // 175 pixels wide (and unlimited height)
+    add_image_size( 'image-1920px-wide', 1920 ); // 1920 pixels wide (and unlimited height)
+	// use 'medium_large' for 768 pixels wide
+    add_image_size( 'image-384px-wide', 384 ); // 768 / 2 = 384 pixels wide (and unlimited height)
+    add_image_size( 'image-192px-wide', 192 ); // 384 / 2 = 192 pixels wide (and unlimited height)
 }
 
 // Page Template Dashboard
@@ -205,3 +205,9 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// do not load jquery
+add_action('wp_enqueue_scripts', 'do_not_load_jquery');
+function do_not_load_jquery(){
+    wp_deregister_script('jquery');
+}
