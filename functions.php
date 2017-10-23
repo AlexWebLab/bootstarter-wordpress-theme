@@ -3,7 +3,7 @@
 add_theme_support( 'title-tag' );
 
 // Enable support for Post Thumbnails on posts and pages.
-add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
 // Theme Menus
 register_nav_menus( array(
