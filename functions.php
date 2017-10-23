@@ -211,3 +211,14 @@ add_action('wp_enqueue_scripts', 'do_not_load_jquery');
 function do_not_load_jquery(){
     wp_deregister_script('jquery');
 }
+
+// let ACF check for updates for not https websites
+add_filter( 'https_ssl_verify', '__return_false' );
+
+// change label of Media to Media Library
+function change_post_menu_label() {
+    global $menu;
+    $menu[10][0] = 'Media Library';
+	return;
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
