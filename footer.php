@@ -14,6 +14,8 @@
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/cssua.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.2.1.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mobile.custom.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/flickity-2.0.10/flickity.pkgd.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/fancyBox-3.1.28/jquery.fancybox.min.js"></script>
