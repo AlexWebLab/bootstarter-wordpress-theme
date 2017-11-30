@@ -42,6 +42,10 @@ $(document).ready(function() {
         }
     }
 
+    $('.entry-content iframe[src*="youtube.com"]').each(function() {
+        $(this).attr('src', $(this).attr('src')+'&amp;wmode=transparent&amp;rel=0').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+    });
+
     tuning();
 });
 
