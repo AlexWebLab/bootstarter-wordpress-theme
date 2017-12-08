@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     // adding swipe support to carousel
-    // $(".carousel").on('swiperight', function() {$(this).carousel('prev');});
-    // $(".carousel").on('swipeleft', function() {$(this).carousel('next');});
+    $(".carousel").on('swiperight', function() {$(this).carousel('prev');});
+    $(".carousel").on('swipeleft', function() {$(this).carousel('next');});
 
     // select2
     $('.select2').select2({
@@ -61,7 +61,7 @@ $(window).on('resize', function() {
     width = $(window).width();
     horizontal_tuning(); // launched only if there is an horizontal resize
 
-    }, 250);
+    }, 100);
 });
 
 $(window).on('scroll', function() { });
@@ -86,6 +86,14 @@ function tuning() {
 
 function horizontal_tuning() { // launched only if there is an horizontal resize
 
+}
+
+function is_touch(){
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function isBreakpoint( alias ) {

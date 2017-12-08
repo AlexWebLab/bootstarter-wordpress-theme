@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap_extended.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-flexbox.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/fancyBox-3.1.28/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/fancyBox-3.2.10/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/select2-4.0.4/css/select2.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/flickity-2.0.10/flickity.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/jasny-bootstrap-3.1.3/css/jasny-bootstrap.min.css">
