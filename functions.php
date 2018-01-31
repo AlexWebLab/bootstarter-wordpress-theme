@@ -210,6 +210,7 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 add_action('wp_enqueue_scripts', 'do_not_load_jquery');
 function do_not_load_jquery(){
     wp_deregister_script('jquery');
+	wp_register_script('jquery', '', '', '', true);
 }
 
 // let ACF check for updates for not https websites
