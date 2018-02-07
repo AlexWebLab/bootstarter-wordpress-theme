@@ -61,14 +61,14 @@ function my_content_wrapper_end() {
 
 // Custom CSS for WYSIWYG editor
 function custom_editor_style() {
-	add_editor_style(get_template_directory_uri().'/css/style-wysiwyg-editor.css');
+	add_editor_style(get_stylesheet_directory_uri().'/css/style-wysiwyg-editor.css');
 }
 add_action('after_setup_theme', 'custom_editor_style');
 
 // Add CSS to back end
 function css_to_back_end() {
 	if ( !current_user_can('manage_options') ) {
-		echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/css/style-for-editors.css">';
+		echo '<link rel="stylesheet" href="'.get_stylesheet_directory_uri().'/css/style-for-editors.css">';
 	}
 }
 add_action('admin_head', 'css_to_back_end');
@@ -118,7 +118,7 @@ function my_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 function my_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/style-login.css' );
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/css/style-login.css' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
