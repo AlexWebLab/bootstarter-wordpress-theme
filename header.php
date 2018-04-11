@@ -19,32 +19,32 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-    <header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner">
 
 		<nav id="site-navigation" class="main-navigation navbar" role="navigation">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-				<button type="button" class="icon icon--transparent navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navigation">
-  				  <span></span><span></span><span></span>
-  			  </button>
-		      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
-		    </div>
-	        <?php
-	            wp_nav_menu( array(
-	                'menu'              => 'primary',
-	                'theme_location'    => 'primary',
-	                'depth'             => 2,
-	                'container'         => 'div',
-	                'container_class'   => 'collapse navbar-collapse',
-	        		'container_id'      => 'main_navigation',
-	                'menu_class'        => 'nav navbar-nav',
-	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-	                'walker'            => new wp_bootstrap_navwalker())
-	            );
-	        ?>
-		    </div>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="icon icon--transparent navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navigation">
+						<span></span><span></span><span></span>
+					</button>
+					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+				</div>
+				<?php
+				wp_nav_menu( array(
+					'menu'              => 'primary',
+					'theme_location'    => 'primary',
+					'depth'             => 2,
+					'container'         => 'div',
+					'container_class'   => 'collapse navbar-collapse',
+					'container_id'      => 'main_navigation',
+					'menu_class'        => 'nav navbar-nav',
+					'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+					'walker'            => new wp_bootstrap_navwalker())
+				);
+				?>
+			</div>
 		</nav><!-- #site-navigation -->
 
-    </header><!-- #masthead -->
+	</header><!-- #masthead -->
 
 	<main id="main" class="site-main" role="main">
